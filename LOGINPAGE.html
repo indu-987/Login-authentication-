@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+    <script>
+        
+         function Validate() {
+            var password = document.getElementById("1stPassword").value;
+            var confirmPassword = document.getElementById("ConfirmPassword").value;
+            if (password != confirmPassword)
+             {
+               { document.getElementById("im").src="./wrong.png" &&
+
+                 alert("You first Passwords is not similar with 2nd password. Please enter same password in both" ); }
+                return false;
+            }
+            alert("login successful")
+            return true;
+        }
+       
+    </script>
+</head>
+<body>
+    <h1 class="title">Login Form</h1>
+     <section class="main">
+       
+        <div >
+            <img  class="image" id="im" src="./undraw_secure_login_pdn4.png" alt="">
+        </div>
+        <div class="inputfield" >
+         <form action="" onsubmit="Validate()"> 
+        <label for=""  >Name</label><br>
+        <input type="text" pattern="[A-Za-z]{3,}" title="should contain minimun 3 letters"><br>
+        <label for="">Email</label><br>
+        <input type="email"><br> 
+        <label for="" >Password</label><br>
+        <input type="text" id="1stPassword"><br>
+        <label for="">Confirm Password</label><br>
+        <input type="text" id="ConfirmPassword"><br>
+        <button style="border-radius: 20px; padding: 10px; width: 80px; margin-left: 80px; color: rgb(37, 34, 28); background-color: rgb(185, 125, 13); margin-top: 50px;">Submit</button>
+        
+
+        </div>
+    </form>
+
+     </section>
+    
+</body>
+</html>
